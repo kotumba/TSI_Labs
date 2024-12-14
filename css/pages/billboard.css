@@ -1,0 +1,135 @@
+body {
+    background: rgb(255,7,7);
+    background: linear-gradient(180deg, rgb(218, 53, 24) 0%, rgb(255, 163, 43) 35%, rgba(255, 226, 184, 0.363) 100%);
+}
+.billboard-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+}
+
+.filters-container {
+    width: 25%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.filter {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.card-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+}
+
+h1,h2,h3 {
+    color: white;
+}
+
+.search {
+    width: fit-content;
+}
+.search p {
+    border-radius: 10px;
+    padding-left: 10px;
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+    margin: 0;
+}
+
+#sort, #university, #min-date, #max-date {
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+    margin: 0;
+}
+#sort option:active {
+    color: #8f2222;
+
+}
+#sort:focus {
+    outline: none;
+}
+
+#search-input {
+    padding: 5px;
+    font-size: 18px;
+    border: 2px solid rgb(255, 225, 184); 
+    border-radius: 5px 0 0 5px;
+    margin: 0;
+    color: #8f2222;
+}
+#search-input::placeholder {
+    color: #af5c5c;
+}
+#search-input:focus {
+    outline: none;
+}
+  
+#search-button {
+    padding-left: 60px;
+    padding-right: 20px;
+    font-size: 18px;
+    color: #fff;
+    background-image: linear-gradient(270deg, rgba(218, 53, 24,0.9) 0%, rgba(255, 163, 43, 0.8) 65%, rgb(255, 255, 255) 100%);;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    height:52px;
+    transition: background-color 0.3s ease;
+    margin: 0;
+}
+  
+#search-button:hover {
+    background-color: rgb(218, 53, 24);
+}
+
+#search-input::-webkit-search-cancel-button {
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background-image: url("cross.png");
+    background-size: 15px 15px;
+}
+
+.checkbox-container, .date-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    margin: 5px 0;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+#university {
+    width: 90%;
+}
+
+
+
+

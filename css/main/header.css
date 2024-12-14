@@ -1,0 +1,77 @@
+header {
+    width:100%;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    padding: 10px;
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(90deg, rgba(218, 53, 24,0.9) 0%, rgba(255, 163, 43, 0.8) 35%, rgba(218, 53, 24,0.9) 100%);
+    border-image-slice: 1;
+    overflow: cover;
+    z-index:1;
+}
+main {
+    z-index:0;
+}
+.nav-logo {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 30%;
+    
+}
+.logo {
+    height: 32px;
+    width: 32px;
+    align-self: center;
+}
+
+.navbar {
+    width: 70%;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-item, .nav-logo { 
+    height: fit-content;
+    vertical-align: middle;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    text-align:end;
+    padding: 5px 15px;
+    border-radius: 40px;
+    text-decoration:none;
+    color: rgb(218, 53, 24);
+    transition: background-color 0.3s ease;
+}
+
+.nav-item {
+    font-size: 18px;
+    width: fit-content;
+}
+
+.nav-item:hover {
+    color: rgb(218, 53, 24);
+    font-weight: bolder;
+    background-color: rgba(255, 226, 184, 0.363);
+}
+
+
+
+.icons {
+    height: 24px;
+    width: 24px;
+    align-self: center;
+}
+
+
+  
+.menu-left, .menu-right {
+    list-style-type: none;
+    margin-right: 0;
+    padding: 0;
+    display: flex;
+}

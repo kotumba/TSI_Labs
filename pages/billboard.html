@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Гранат Науки | Афиша мероприятий от ведущих университетов России</title>
+    <link rel="stylesheet" href="../css/pages/billboard.css">
+    <link rel="stylesheet" href="../css/main/style.css">
+    <link rel="stylesheet" href="../css/main/header.css">
+    <link rel="stylesheet" href="../css/main/footer.css">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="nav-logo">
+      <img class="logo" src="../images/favicon.png" alt="Логотип" />
+      <span>Гранат Науки</span>
+    </a>
+    <nav class="navbar">
+      <div class="menu-left">
+        <a href="../pages/billboard.html" class="nav-item">
+          <img class="icons" src="../images/billboard.png" alt="Афиша" />
+          <span>Афиша</span>
+        </a>
+      </div>
+      <div class="menu-right">
+          <a href="../pages/my_events.html" class="nav-item">
+              <img class="icons" src="../images/event.png" alt="Мои мероприятия" />
+              <span>Мои мероприятия</span>
+          </a>
+          <a href="../pages/account.html" class="nav-item">
+              <img class="icons" src="../images/account.png" alt="Профиль" />
+              <span>Личный кабинет</span>
+          </a>
+      </div>
+    </nav>
+  </header>
+    
+    <main>
+    <h1>Афиша мероприятий</h1>
+    <div class="billboard-container">
+      <aside class="filters-container">
+        <p>Фильтры</p>
+        <div class="filter">
+          <p>Университет</p>
+          <select id="university" name="university" style="background-color: rgba(218, 53, 24,0.9); color: white;">
+            <option value="any">Любой</option>
+            <option value="ssau">Самарский университет</option>
+            <option value="samgtu">СамГТУ</option>
+            <option value="pguti">ПГУТИ</option>
+          </select>
+        </div>
+        <div class="filter">
+          <p>Дата</p>
+          <div class="date-container">
+            <div class="date">
+              <label for="min-date">От</label>
+              <input type="date" id="min-date" placeholder="от" style="background-color: rgba(255, 163, 43, 0.8); color: white;">    
+            </div>
+            <div class="date">
+              <label for="max-date">До</label>
+              <input type="date" id="max-date" placeholder="до" style="background-color: rgba(255, 163, 43, 0.8); color: white;">    
+            </div>
+          </div>
+        </div>
+        <div class="filter">
+            <p>Теги</p>
+            <label for="format">Формат</label>
+            <div class="form_radio_btn">
+              <input id="format-1" type="radio" name="format" value="any" checked>
+              <label for="format-1">Любой</label>
+            </div>
+             
+            <div class="form_radio_btn">
+              <input id="format-2" type="radio" name="format" value="online">
+              <label for="format-2">Онлайн</label>
+            </div>
+             
+            <div class="form_radio_btn">
+              <input id="format-3" type="radio" name="format" value="offline">
+              <label for="format-3">Оффлайн</label>
+            </div>
+
+            <label for="price">Цена</label>
+            <div class="form_radio_btn">
+              <input id="price-1" type="radio" name="price" value="any" checked>
+              <label for="price-1">Любая</label>
+            </div>
+             
+            <div class="form_radio_btn">
+              <input id="price-2" type="radio" name="price" value="free">
+              <label for="price-2">Бесплатно</label>
+            </div>
+             
+            <div class="form_radio_btn">
+              <input id="price-3" type="radio" name="price" value="pay">
+              <label for="price-3">Платно</label>
+            </div>
+
+            <div class="checkbox-container">
+              <p>Тип</p>
+              <div class="checkbox">
+                <input type="checkbox" id="seminar" name="type" />
+                <label for="seminar">Семинар</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="lecture" name="type" />
+                <label for="lecture">Лекция</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="mk" name="type" />
+                <label for="mk">Мастер-класс</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="festival" name="type" />
+                <label for="festival">Фестиваль</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="olympiad" name="type" />
+                <label for="olympiad">Олимпиада</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="hackathon" name="type" />
+                <label for="hackathon">Хакатон</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="conference" name="type" />
+                <label for="conference">Конференция</label>
+              </div>
+            </div>
+
+            <div class="checkbox-container">
+              <p>Для кого</p>
+              <div class="checkbox">
+                <input type="checkbox" id="student" name="for" />
+                <label for="student">Студентам</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="teacher" name="for" />
+                <label for="teacher">Преподавателям</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="applicant" name="for" />
+                <label for="applicant">Абитуриентам</label>
+              </div>
+            </div>
+            
+        </div>
+        <div class="filter">
+          <button id="submit-filters" class="btn btn-secondary">Применить фильтры</button>
+        </div>
+      </aside>
+      <section class="main-container">
+        <section class="search">
+          <p>
+              <input type="search" id="search-input" placeholder="Поиск мероприятий...">
+              <input type="button" value="Найти" id="search-button">
+          </p>
+        </section>
+
+
+        <button class="buttonTop" onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+        <section class="sort">
+          <select id="sort" name="sort">
+            <option value="data">По дате</option>
+            <option value="name">По названию</option>
+            <option value="cheap">Сначала дешевле</option>
+            <option value="expensive">Сначала дороже</option>
+          </select>
+        </section>
+
+        <section class="card-container">
+          <div class="event-card" id="event1" data-university="ssau" data-date="01.01.2024" data-format="online" data-price="free" data-type="mk" data-for="student">
+            <a href="pages/event.html"><img src="../images/event1.jpg" alt="Мероприятие" class="event-image" /></a> 
+            <div class="event-details">
+              <p class="event-title"><a href="../pages/event.html">Название мероприятия</a></p>
+              <div class="event-tags">
+                <div class="tag" style="background-color: rgb(127, 204, 255);">
+                    <span>Онлайн</span>
+                </div>
+                <div class="tag" style="background-color: rgb(255, 185, 81);">
+                    <span>Бесплатно</span>
+                </div>
+                <div class="tag" style="background-color: rgb(252, 160, 244);">
+                    <span>Мастер-класс</span>
+                </div>
+                <div class="tag" style="background-color: rgb(217, 252, 160);">
+                    <span>Студентам</span>
+                </div>
+              </div>
+              <p class="event-description">Краткое описание мероприятия, которое расскажет о том, что вас ожидает.</p>
+              <p class="event-date">Дата проведения: 01.01.2024</p>
+              <div class="btn btn-primary">Записаться</div>
+            </div>
+          </div>
+          <div class="event-card" id="event1" data-university="ssau" data-date="01.01.2024" data-format="online" data-price="free" data-type="mk" data-for="student">
+            <a href="pages/event.html"><img src="../images/event1.jpg" alt="Мероприятие" class="event-image" /></a> 
+            <div class="event-details">
+              <p class="event-title"><a href="../pages/event.html">Название мероприятия</a></p>
+              <div class="event-tags">
+                <div class="tag" style="background-color: rgb(127, 204, 255);">
+                    <span>Онлайн</span>
+                </div>
+                <div class="tag" style="background-color: rgb(255, 185, 81);">
+                    <span>Бесплатно</span>
+                </div>
+                <div class="tag" style="background-color: rgb(252, 160, 244);">
+                    <span>Мастер-класс</span>
+                </div>
+                <div class="tag" style="background-color: rgb(217, 252, 160);">
+                    <span>Студентам</span>
+                </div>
+              </div>
+              <p class="event-description">Краткое описание мероприятия, которое расскажет о том, что вас ожидает.</p>
+              <p class="event-date">Дата проведения: 01.01.2024</p>
+              <div class="btn btn-primary">Записаться</div>
+            </div>
+          </div><div class="event-card" id="event1" data-university="ssau" data-date="01.01.2024" data-format="online" data-price="free" data-type="mk" data-for="student">
+            <a href="pages/event.html"><img src="../images/event1.jpg" alt="Мероприятие" class="event-image" /></a> 
+            <div class="event-details">
+              <p class="event-title"><a href="../pages/event.html">Название мероприятия</a></p>
+              <div class="event-tags">
+                <div class="tag" style="background-color: rgb(127, 204, 255);">
+                    <span>Онлайн</span>
+                </div>
+                <div class="tag" style="background-color: rgb(255, 185, 81);">
+                    <span>Бесплатно</span>
+                </div>
+                <div class="tag" style="background-color: rgb(252, 160, 244);">
+                    <span>Мастер-класс</span>
+                </div>
+                <div class="tag" style="background-color: rgb(217, 252, 160);">
+                    <span>Студентам</span>
+                </div>
+              </div>
+              <p class="event-description">Краткое описание мероприятия, которое расскажет о том, что вас ожидает.</p>
+              <p class="event-date">Дата проведения: 01.01.2024</p>
+              <div class="btn btn-primary">Записаться</div>
+            </div>
+          </div><div class="event-card" id="event1" data-university="ssau" data-date="01.01.2024" data-format="online" data-price="free" data-type="mk" data-for="student">
+            <a href="pages/event.html"><img src="../images/event1.jpg" alt="Мероприятие" class="event-image" /></a> 
+            <div class="event-details">
+              <p class="event-title"><a href="../pages/event.html">Название мероприятия</a></p>
+              <div class="event-tags">
+                <div class="tag" style="background-color: rgb(127, 204, 255);">
+                    <span>Онлайн</span>
+                </div>
+                <div class="tag" style="background-color: rgb(255, 185, 81);">
+                    <span>Бесплатно</span>
+                </div>
+                <div class="tag" style="background-color: rgb(252, 160, 244);">
+                    <span>Мастер-класс</span>
+                </div>
+                <div class="tag" style="background-color: rgb(217, 252, 160);">
+                    <span>Студентам</span>
+                </div>
+              </div>
+              <p class="event-description">Краткое описание мероприятия, которое расскажет о том, что вас ожидает.</p>
+              <p class="event-date">Дата проведения: 01.01.2024</p>
+              <div class="btn btn-primary">Записаться</div>
+            </div>
+          </div><div class="event-card" id="event1" data-university="ssau" data-date="01.01.2024" data-format="online" data-price="free" data-type="mk" data-for="student">
+            <a href="pages/event.html"><img src="../images/event1.jpg" alt="Мероприятие" class="event-image" /></a> 
+            <div class="event-details">
+              <p class="event-title"><a href="../pages/event.html">Название мероприятия</a></p>
+              <div class="event-tags">
+                <div class="tag" style="background-color: rgb(127, 204, 255);">
+                    <span>Онлайн</span>
+                </div>
+                <div class="tag" style="background-color: rgb(255, 185, 81);">
+                    <span>Бесплатно</span>
+                </div>
+                <div class="tag" style="background-color: rgb(252, 160, 244);">
+                    <span>Мастер-класс</span>
+                </div>
+                <div class="tag" style="background-color: rgb(217, 252, 160);">
+                    <span>Студентам</span>
+                </div>
+              </div>
+              <p class="event-description">Краткое описание мероприятия, которое расскажет о том, что вас ожидает.</p>
+              <p class="event-date">Дата проведения: 01.01.2024</p>
+              <div class="btn btn-primary">Записаться</div>
+            </div>
+          </div><div class="event-card" id="event1" data-university="ssau" data-date="01.01.2024" data-format="online" data-price="free" data-type="mk" data-for="student">
+            <a href="pages/event.html"><img src="../images/event1.jpg" alt="Мероприятие" class="event-image" /></a> 
+            <div class="event-details">
+              <p class="event-title"><a href="../pages/event.html">Название мероприятия</a></p>
+              <div class="event-tags">
+                <div class="tag" style="background-color: rgb(127, 204, 255);">
+                    <span>Онлайн</span>
+                </div>
+                <div class="tag" style="background-color: rgb(255, 185, 81);">
+                    <span>Бесплатно</span>
+                </div>
+                <div class="tag" style="background-color: rgb(252, 160, 244);">
+                    <span>Мастер-класс</span>
+                </div>
+                <div class="tag" style="background-color: rgb(217, 252, 160);">
+                    <span>Студентам</span>
+                </div>
+              </div>
+              <p class="event-description">Краткое описание мероприятия, которое расскажет о том, что вас ожидает.</p>
+              <p class="event-date">Дата проведения: 01.01.2024</p>
+              <div class="btn btn-primary">Записаться</div>
+            </div>
+          </div><div class="event-card" id="event1" data-university="ssau" data-date="01.01.2024" data-format="online" data-price="free" data-type="mk" data-for="student">
+            <a href="pages/event.html"><img src="../images/event1.jpg" alt="Мероприятие" class="event-image" /></a> 
+            <div class="event-details">
+              <p class="event-title"><a href="../pages/event.html">Название мероприятия</a></p>
+              <div class="event-tags">
+                <div class="tag" style="background-color: rgb(127, 204, 255);">
+                    <span>Онлайн</span>
+                </div>
+                <div class="tag" style="background-color: rgb(255, 185, 81);">
+                    <span>Бесплатно</span>
+                </div>
+                <div class="tag" style="background-color: rgb(252, 160, 244);">
+                    <span>Мастер-класс</span>
+                </div>
+                <div class="tag" style="background-color: rgb(217, 252, 160);">
+                    <span>Студентам</span>
+                </div>
+              </div>
+              <p class="event-description">Краткое описание мероприятия, которое расскажет о том, что вас ожидает.</p>
+              <p class="event-date">Дата проведения: 01.01.2024</p>
+              <div class="btn btn-primary">Записаться</div>
+            </div>
+          </div>
+          <div class="event-card" id="event1" data-university="ssau" data-date="01.01.2024" data-format="online" data-price="free" data-type="mk" data-for="student">
+            <a href="pages/event.html"><img src="../images/event1.jpg" alt="Мероприятие" class="event-image" /></a> 
+            <div class="event-details">
+              <p class="event-title"><a href="../pages/event.html">Название мероприятия</a></p>
+              <div class="event-tags">
+                <div class="tag" style="background-color: rgb(127, 204, 255);">
+                    <span>Онлайн</span>
+                </div>
+                <div class="tag" style="background-color: rgb(255, 185, 81);">
+                    <span>Бесплатно</span>
+                </div>
+                <div class="tag" style="background-color: rgb(252, 160, 244);">
+                    <span>Мастер-класс</span>
+                </div>
+                <div class="tag" style="background-color: rgb(217, 252, 160);">
+                    <span>Студентам</span>
+                </div>
+              </div>
+              <p class="event-description">Краткое описание мероприятия, которое расскажет о том, что вас ожидает.</p>
+              <p class="event-date">Дата проведения: 01.01.2024</p>
+              <div class="btn btn-primary">Записаться</div>
+            </div>
+          </div>
+          <div class="event-card" id="event1" data-university="ssau" data-date="01.01.2024" data-format="online" data-price="free" data-type="mk" data-for="student">
+            <a href="pages/event.html"><img src="../images/event1.jpg" alt="Мероприятие" class="event-image" /></a> 
+            <div class="event-details">
+              <p class="event-title"><a href="../pages/event.html">Название мероприятия</a></p>
+              <div class="event-tags">
+                <div class="tag" style="background-color: rgb(127, 204, 255);">
+                    <span>Онлайн</span>
+                </div>
+                <div class="tag" style="background-color: rgb(255, 185, 81);">
+                    <span>Бесплатно</span>
+                </div>
+                <div class="tag" style="background-color: rgb(252, 160, 244);">
+                    <span>Мастер-класс</span>
+                </div>
+                <div class="tag" style="background-color: rgb(217, 252, 160);">
+                    <span>Студентам</span>
+                </div>
+              </div>
+              <p class="event-description">Краткое описание мероприятия, которое расскажет о том, что вас ожидает.</p>
+              <p class="event-date">Дата проведения: 01.01.2024</p>
+              <div class="btn btn-primary">Записаться</div>
+            </div>
+          </div>
+            </section>
+      </section>
+      
+
+            
+         
+    </div>
+    
+      
+        
+        
+        
+    </main>
+
+    <footer class="footer" style="background: linear-gradient(0deg, rgb(218, 53, 24) 0%, rgb(255, 163, 43) 35%, rgba(255, 226, 184, 0.363) 100%)">
+      <div class="container">
+          <div class="row">
+              <!-- Контакты -->
+              <div class="footer-column1">
+                  <p>Контакты</p>
+                  <ul>
+                    <li>granat_science@gmail.com</li>
+                    <li>+7 (917) 106-79-00</li>
+                    <li>Самара, Московское шоссе, д.34А</li>
+                  </ul>
+              </div>
+              
+              <!-- Навигация -->
+              <div class="footer-column2">
+                  <p>Навигация</p>
+                  <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="../pages/billboard.html">Афиша</a></li>
+                    <li><a href="../pages/about_us.html">О нас</a></li>
+                    <li><a href="../pages/account.html">Личный кабинет</a></li>
+                  </ul>
+              </div>
+  
+              
+              <!-- Социальные сети -->
+              <div class="footer-column3">
+                  <ul>
+                    <li><a href="#"><img src="../images/vk.png" alt="Вконтакте" class="footer-image"/></a></li>
+                    <li><a href="#"><img src="../images/telegram.png" alt="Телеграм" class="footer-image"/></a></li>
+                    <li><a href="#"><img src="../images/facebook.png" alt="Фейсбук" class="footer-image"/></a></li>
+                  </ul>
+              </div>
+  
+              
+          </div>
+
+          <!-- Копирайт -->
+          <div class="copyright">
+              <p style="color: #ffffffad;">© 2024 Гранат Науки. Все права защищены.</p>
+          </div>
+      </div>        
+  </footer>
+</body>
+<script src="../js/scroll_button.js"></script>
+</html>
