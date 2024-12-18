@@ -1,0 +1,39 @@
+.event {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: auto;
+}
+
+.event-img {
+    width: auto;
+    height: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.is-finished {
+    background-color: rgb(252, 160, 160); 
+}
+
+.is-will {
+    background-color: rgb(197, 252, 160); 
+}
+
+.events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+h1 {
+    color: #8f2222;
+}

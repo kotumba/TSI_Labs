@@ -2,9 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Гранат Науки | мои мероприятия</title>
+    <title>Гранат Науки | Мои мероприятия</title>
     <meta name="description" content="Гранат Науки | мои мероприятия"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/pages/my_events.css">
     <link rel="stylesheet" href="../css/main/style.css">
     <link rel="stylesheet" href="../css/main/header.css">
     <link rel="stylesheet" href="../css/main/footer.css">
@@ -37,7 +38,61 @@
     </header>
     
     <main>
-        мои мероприятия
+        <h1>Мои мероприятия</h1>
+        <section class="events-container">
+          <div class="event" id="event1" data-university="mgu" data-date="15.11.2024" data-format="offline" data-price="free" data-type="seminar" data-for="student"> 
+            <a href="../pages/event.html"><img src="../images/event1.jpg" alt="Семинар" class="event-img" /></a>  
+            <div class="event-details"> 
+              <p class="event-title"><a href="../pages/event.html">Современные подходы к научным исследованиям</a></p> 
+              <p class="event-university">Московский государственный университет</p> 
+              <div class="event-tags"> 
+                <div class="tag" style="background-color: rgb(127, 204, 255);"> 
+                    <span>Офлайн</span> 
+                </div> 
+                <div class="tag" style="background-color: rgb(255, 185, 81);"> 
+                    <span>Бесплатно</span> 
+                </div> 
+                <div class="tag" style="background-color: rgb(252, 160, 244);"> 
+                    <span>Семинар</span> 
+                </div> 
+                <div class="tag" style="background-color: rgb(217, 252, 160);"> 
+                    <span>Студентам</span> 
+                </div> 
+              </div> 
+              <p class="event-description">Изучите новые методы и технологии в проведении научных исследований.</p> 
+              <p class="event-date">Дата проведения: 15.11.2024</p>
+              <div class="tag finish-log" style="text-align: center;"> 
+                <span>Мероприятие прошло!</span> 
+              </div> 
+            </div> 
+          </div>
+          <div class="event" id="event1" data-university="mgu" data-date="15.11.2025" data-format="offline" data-price="free" data-type="seminar" data-for="student"> 
+            <a href="../pages/event.html"><img src="../images/event1.jpg" alt="Семинар" class="event-img" /></a>  
+            <div class="event-details"> 
+              <p class="event-title"><a href="../pages/event.html">Современные подходы к научным исследованиям</a></p> 
+              <p class="event-university">Московский государственный университет</p> 
+              <div class="event-tags"> 
+                <div class="tag" style="background-color: rgb(127, 204, 255);"> 
+                    <span>Офлайн</span> 
+                </div> 
+                <div class="tag" style="background-color: rgb(255, 185, 81);"> 
+                    <span>Бесплатно</span> 
+                </div> 
+                <div class="tag" style="background-color: rgb(252, 160, 244);"> 
+                    <span>Семинар</span> 
+                </div> 
+                <div class="tag" style="background-color: rgb(217, 252, 160);"> 
+                    <span>Студентам</span> 
+                </div> 
+              </div> 
+              <p class="event-description">Изучите новые методы и технологии в проведении научных исследований.</p> 
+              <p class="event-date">Дата проведения: 15.11.2025</p>
+              <div class="tag finish-log" style="text-align: center;"> 
+                <span>Мероприятие прошло!</span> 
+              </div> 
+            </div> 
+          </div>
+        </section>
       
     </main>
 
@@ -85,5 +140,6 @@
         </div>        
     </footer>
 </body>
-<script src="js/scroll_button.js"></script>
+<script src="../js/scroll_button.js"></script>
+<script src="../js/show_finished.js"></script>
 </html>

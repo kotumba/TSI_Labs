@@ -5,10 +5,21 @@
     <title>Гранат Науки | Личный кабинет</title>
     <meta name="description" content="Гранат Науки | Личный кабинет"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/pages/account.css">
+
     <link rel="stylesheet" href="../css/main/style.css">
     <link rel="stylesheet" href="../css/main/header.css">
     <link rel="stylesheet" href="../css/main/footer.css">
     <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <script>
+      function confirmLogOut() {
+        result = confirm("Вы уверены, что хотите выйти из профиля?");
+        if (result) {
+          window.location.replace('../pages/login.html');
+        }
+      }
+    </script>
 </head>
 <body>
     <header>
@@ -37,7 +48,30 @@
     </header>
     
     <main>
-        Личный кабинет
+      <h1>Личный кабинет</h1>
+      <section class="main">
+        <div id="profile-info" class="profile-section">
+          <div class="user-info">
+            <h2>Мои данные</h2>
+            <p><strong>Фамилия:</strong>Герасимова</p>
+            <p><strong>Имя:</strong>Ксения</p>
+            <p><strong>Отчество:</strong>Сергеевна</p>
+            <p><strong>Email:</strong>ksger@gmail.com</p>
+            <p><strong>Телефон:</strong>+7 917 106 79 00</p> 
+            <div style="display: flex; margin: 0; width: fit-content; height: fit-content;">
+              <p><strong>Статус:</strong></p> 
+              <div class="tag" style="background-color: rgb(252, 160, 244); width: fit-content; margin: auto;"> 
+                <span>Студент</span> 
+              </div> 
+            </div>        
+          </div>
+          <div class="user-buttons">
+            <h2>Действия</h2>
+            <div class="btn btn-secondary">Редактировать профиль</div>
+            <div class="btn btn-secondary" onclick="confirmLogOut()">Выйти из аккаунта</div>
+          </div>
+        </div>
+      </section>
       
     </main>
 

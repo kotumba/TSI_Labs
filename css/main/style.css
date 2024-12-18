@@ -95,41 +95,51 @@ main {
   
 .event-card, .university-card {
     display: flex;
+    align-self: stretch;
     flex-direction: column;
     width: 300px;
-    height: 50%;
     padding: 20px;
     border-radius: 10px;
     background-color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.event-card:hover, .university-card:hover {
+.event-card:hover, .university-card:hover, .event:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(255, 163, 43, 0.5);
 }
   
-.event-image {
+.event-image, .university-image {
     width: 100%;
-    height: auto;
     max-height: 220px;
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     
 }
+.event-image {
+    height: auto;
+}
+.university-image {
+    height: 180px;
+}
   
 .event-details {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    flex-grow: 1;
+    gap: 5px;
+    justify-content: space-between;
 }
   
-.event-title {
+.event-title, .university-card p {
     font-size: 24px;
     line-height: 1;
     margin-bottom: 0;
+    color: #8f2222;
+
 }
-.event-title:hover {
+
+.event-title:hover, .university-card p:hover {
     font-weight: bold;
 }
   
@@ -139,10 +149,11 @@ main {
     color: #555;
 }
   
-.event-date {
+.event-date, .event-university {
     font-size: 14px;
     color: #777;
     margin-bottom: 0;
+    margin-top: 0;
 }
   
 .event-tags {
@@ -175,9 +186,7 @@ main {
     left: 0;
 }
   
-.event-title {
-    color: #8f2222;
-}
+
 
 .btn-secondary, .btn-redirect {
     background-color: rgba(255, 226, 184, 0.363);
@@ -187,4 +196,49 @@ main {
 .btn-secondary:hover, .btn-redirect:hover {
     background-color: rgba(255, 225, 184, 1);
     color: #8f2222;
+}
+
+.no-hover:hover {
+    background: linear-gradient(180deg, rgb(218, 53, 24) 0%, rgb(255, 179, 80) 50%, rgb(218, 53, 24) 100%);
+    color: white;
+    cursor:default;
+}
+
+input[type='radio']:after, input[type='checkbox']:after {
+    width: 15px;
+    height: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: rgb(255, 227, 191);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+input[type='radio']:checked:after, input[type='checkbox']:checked:after {
+    width: 15px;
+    height: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: rgb(255, 163, 43);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+ 
+input[type='radio']:after, input[type='radio']:checked:after {
+    border-radius: 15px;
+}
+
+input[type='checkbox']:after, input[type='checkbox']:checked:after {
+    border-radius: 3px;
+}
+
+
+.checkbox, .form_radio_btn {
+    display: flex;
+    align-items: center;
+    gap: 3px;
 }

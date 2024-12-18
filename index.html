@@ -5,10 +5,12 @@
     <title>Гранат Науки | Афиша мероприятий от ведущих университетов России</title>
     <meta name="description" content="Гранат Науки | Афиша мероприятий от ведущих университетов России"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="css/pages/index.css">
     <link rel="stylesheet" href="css/main/style.css">
     <link rel="stylesheet" href="css/main/header.css">
     <link rel="stylesheet" href="css/main/footer.css">
+
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
@@ -72,7 +74,7 @@
       <section class="nearest-events">         
         <h2>Ближайшие мероприятия</h2>
         <div class="card-container">
-            <div class="event-card" id="event1" data-university="ssau" data-date="01.01.2024" data-format="online" data-price="free" data-type="mk" data-for="student">
+            <div class="event-card" id="event1" data-university="ssau" data-date="01.01.2025" data-format="online" data-price="free" data-type="mk" data-for="student">
                 <a href="pages/event.html"><img src="images/event1.jpg" alt="Мероприятие" class="event-image" /></a> 
                 <div class="event-details">
                   <p class="event-title"><a href="pages/event.html">Название мероприятия</a></p>
@@ -91,8 +93,8 @@
                     </div>
                   </div>
                   <p class="event-description">Краткое описание мероприятия, которое расскажет о том, что вас ожидает.</p>
-                  <p class="event-date">Дата проведения: 01.01.2024</p>
-                  <div class="btn btn-primary">Записаться</div>
+                  <p class="event-date">Дата проведения: 01.01.2025</p>
+                  <div class="btn btn-primary" id="registerBtn">Записаться</div>
                 </div>
               </div>
               <div class="event-card" id="event1" data-university="ssau" data-date="01.01.2024" data-format="online" data-price="free" data-type="mk" data-for="student">
@@ -163,13 +165,12 @@
                   <p class="event-date">Дата проведения: 01.01.2024</p>
                   <div class="btn btn-primary">Записаться</div>
                 </div>
-              </div>
-              <div class="btn btn-redirect">
-                <a href="pages/billboard.html">Все мероприятия</a>
               </div>
               
         </div>
-        
+        <div class="btn btn-redirect">
+          <a href="pages/billboard.html">Все мероприятия</a>
+        </div>
       </section>
       <section class="universities">
         <h2>Университеты</h2>
@@ -177,39 +178,39 @@
         <div class="university-container" id="carousel-container">
             <div id="auto-scroll">
               <div class="university-card">
-                <a href="pages/billboard.html">
-                  <img src="images/event1.jpg" alt="Университет" class="event-image" />
+                <a href="pages/billboard.html?data-university=ssau">
+                  <img src="images/ssau.jpg" alt="Университет" class="university-image" />
                   <p>Самарский Университет</p>
                 </a>
               </div>
               <div class="university-card">
-                <a href="pages/billboard.html">
-                  <img src="images/event1.jpg" alt="Университет" class="event-image" />
+                <a href="pages/billboard.html?data-university=mgu">
+                  <img src="images/mgu.png" alt="Университет" class="university-image" />
+                  <p>МГУ</p>
+                </a>
+              </div>
+              <div class="university-card">
+                <a href="pages/billboard.html?data-university=samgtu">
+                  <img src="images/samgtu.jpg" alt="Университет" class="university-image" />
+                  <p>СамГТУ</p>
+                </a>
+              </div>
+              <div class="university-card">
+                <a href="pages/billboard.html?data-university=ssau">
+                  <img src="images/ssau.jpg" alt="Университет" class="university-image" />
                   <p>Самарский Университет</p>
                 </a>
               </div>
               <div class="university-card">
-                <a href="pages/billboard.html">
-                  <img src="images/event1.jpg" alt="Университет" class="event-image" />
-                  <p>Самарский Университет</p>
+                <a href="pages/billboard.html?data-university=mgu">
+                  <img src="images/mgu.png" alt="Университет" class="university-image" />
+                  <p>МГУ</p>
                 </a>
               </div>
               <div class="university-card">
-                <a href="pages/billboard.html">
-                  <img src="images/event1.jpg" alt="Университет" class="event-image" />
-                  <p>Самарский Университет</p>
-                </a>
-              </div>
-              <div class="university-card">
-                <a href="pages/billboard.html">
-                  <img src="images/event1.jpg" alt="Университет" class="event-image" />
-                  <p>Самарский Университет</p>
-                </a>
-              </div>
-              <div class="university-card">
-                <a href="pages/billboard.html">
-                  <img src="images/event1.jpg" alt="Университет" class="event-image" />
-                  <p>Самарский Университет</p>
+                <a href="pages/billboard.html?data-university=samgtu">
+                  <img src="images/samgtu.jpg" alt="Университет" class="university-image" />
+                  <p>СамГТУ</p>
                 </a>
               </div>
             </div>
@@ -279,4 +280,5 @@
 </body>
 <script src="js/scroll_button.js"></script>
 <script src="js/auto_scroll.js"></script>
+<script src="js/register_to_event.js"></script>
 </html>
