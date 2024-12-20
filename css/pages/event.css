@@ -1,0 +1,61 @@
+.event {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 50%;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px auto;
+}
+
+.description, .university {
+    width: 90%;
+    height: 50%;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px auto;
+}
+
+.event:hover, .description:hover, .university:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(255, 163, 43, 0.5);
+}
+
+.event-img {
+    width: 600px;
+    height: 550px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.is-finished {
+    background-color: rgb(252, 160, 160); 
+}
+
+.is-will {
+    background-color: rgb(197, 252, 160); 
+}
+
+
+.details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+
+h1, h2, h3, strong{
+    color: #8f2222;
+}
+
+ul {
+    list-style-type: disc;
+}

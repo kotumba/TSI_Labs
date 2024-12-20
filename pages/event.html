@@ -5,10 +5,18 @@
     <title>Гранат Науки | Мероприятие</title>
     <meta name="description" content="Гранат Науки | Мероприятие"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/pages/event.css">
     <link rel="stylesheet" href="../css/main/style.css">
     <link rel="stylesheet" href="../css/main/header.css">
     <link rel="stylesheet" href="../css/main/footer.css">
     <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <style>
+      section ul {
+        list-style-type: disc;
+        margin: auto 20px;
+      }
+    </style>
 </head>
 <body>
     <header>
@@ -37,7 +45,84 @@
     </header>
     
     <main>
-        мероприятие
+        <section class="event" id="event1" data-university="ssau" data-date="19.12.2024" data-format="offline" data-price="free" data-type="festival" data-for="student, teacher"> 
+          <img src="../images/event2.jpg" alt="Семинар" class="event-img" style="width: 500px; height: 500px;" />  
+          <div class="details"> 
+            <h1 class="event-title">День немецкого языка</h1> 
+            <p class="event-university">Самарский университет</p> 
+            <div class="event-tags"> 
+              <div class="tag" style="background-color: rgb(127, 204, 255);"> 
+                  <span>Офлайн</span> 
+              </div> 
+              <div class="tag" style="background-color: rgb(255, 185, 81);"> 
+                  <span>Бесплатно</span> 
+              </div> 
+              <div class="tag" style="background-color: rgb(252, 160, 244);"> 
+                  <span>Фестиваль</span> 
+              </div> 
+              <div class="tag" style="background-color: rgb(217, 252, 160);"> 
+                  <span>Студентам и преподавателям</span> 
+              </div> 
+            </div> 
+            <p class="event-description">Традиционный ежегодный "День немецкого языка" от кафедры немецкой филологии и Центра немецкого языка!</p> 
+            <p class="event-date">Дата проведения: 19.12.2024</p>
+            <div class="btn btn-primary" style="width: 40%;">Записаться</div> 
+          </div> 
+        </section>
+
+        <section class="description">
+          <h2>Описание мероприятия</h2>
+          <p>Кафедра немецкой филологии и университетский Центр немецкого языка приглашают всех желающих на традиционный ежегодный "День немецкого языка"!</p>
+          <h3>В программе мероприятия:</h3>
+          <ul>
+            <li>
+              <p>представление специальности "Зарубежная филология (немецкий язык и литература)", Центра немецкого языка и российско-немецкого клуба "DerKlub" при региональном центре развития публичной дипломатии и международных отношений имени Е.М. Примакова;</p>
+            </li>
+            <li>
+              <p>языковые игровые площадки;</p>
+            </li>
+            <li>
+              <p>награждение победителей конкурса переводов и эссе;</p>
+            </li>
+            <li>
+              <p>проведение Онлайн-викторины и награждение победителей и многое другое!</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="university">
+          <h2>Краткая информация об университете</h2>
+          <p>Федеральное государственное автономное образовательное учреждение высшего образования
+            «Самарский национальный исследовательский университет имени академика С.П. Королева»
+          </p>
+          <a href="../pages/university.html">
+            <div class="btn btn-secondary">Узнать больше</div>
+          </a>
+        </section>
+
+        <section class="description">
+          <h2>Контакты организаторов мероприятия</h2>
+          <h3>Кафедра немецкой филологии</h3>
+          <p>
+            <strong>И.о. заведующего кафедрой</strong>
+             - 
+             <a href="https://www.ssau.ru/staff/57789309-nesteryuk-yuliya-vladimirovna/">Юлия Владимировна Нестерюк</a>.
+          </p>
+          <div>
+            <strong>Телефон:</strong> (846) 928-36-48<br>
+            <strong>Адрес:</strong> 443011, Приволжский федеральный округ, Самарская область, г. Самара, ул. Потапова 64/163, корпус 27, кабинет 412а;<br>
+            <strong>Сайт кафедры:</strong> <a href="http://germanistik.ssau.ru" target="_blank">germanistik.ssau.ru</a><br>
+            <strong>Кафедральная группа в соцсетях:</strong> <a href="https://vk.com/public211063627" target="_blank">vk.com/public211063627</a>
+          </div>
+          <h3>Центр немецкого языка</h3>
+          <div>
+            <strong>Телефон:</strong> (846) 928-36-45<br>
+            <strong>Адрес:</strong> 443011, Приволжский федеральный округ, Самарская область, г. Самара, ул. Потапова 64/163, корпус 27;<br>
+            <strong>Сайт Центра:</strong> <a href="http://german.ssau.ru/" target="_blank">http://german.ssau.ru/</a><br>
+            <strong>Кафедральная группа в соцсетях:</strong> <a href="https://vk.com/deutsch_samara" target="_blank">vk.com/deutsch_samara</a>
+          </div>
+
+        </section>
       
     </main>
 
@@ -85,5 +170,6 @@
         </div>        
     </footer>
 </body>
-<script src="js/scroll_button.js"></script>
+<script src="../js/scroll_button.js"></script>
+<script src="../js/register_to_event.js"></script>
 </html>

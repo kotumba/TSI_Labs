@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../css/main/style.css">
     <link rel="stylesheet" href="../css/main/header.css">
     <link rel="stylesheet" href="../css/main/footer.css">
+    <link rel="stylesheet" href="../css/pages/login.css">
     <link rel="icon" type="image/png" href="../images/favicon.png">
+
+
 </head>
 <body>
     <header>
@@ -37,7 +40,115 @@
     </header>
     
     <main>
-        вход
+      <div class="switch-container">
+          <button id="logBtn" class="btns btn-primary" onclick="showTab('login')">Вход</button>
+          <button id="regBtn" class="btns btn-primary" onclick="showTab('register')">Регистрация</button>
+      </div>
+      
+      <div id="login" class="tab active">
+          
+          <form id="loginForm">
+            <div class="form-group-container" style="margin-top: 20px;">  
+              <div class="form-group">  
+                <label for="loginEmail">Электронная почта: </label>  
+                <input type="email" id="loginEmail" placeholder="Введите почту..." required>  
+              </div>  
+              <div class="hint">  
+                <p></p>
+              </div>  
+            </div> 
+            
+            <div class="form-group-container">  
+              <div class="form-group">  
+                <label for="loginPassword">Пароль: </label>  
+                <input type="password" id="loginPassword" placeholder="Пароль..." required>  
+              </div>  
+              <div class="hint">  
+                <p></p>
+              </div>  
+            </div>
+            <div class="submit">
+              <button class="btn btn-primary" type="submit">Войти</button>
+            </div>
+              
+          </form>
+      </div>
+      
+      <div id="register" class="tab">
+          
+          <form id="registerForm">
+            <div class="form-group-container" style="margin-top: 20px;">
+              <div class="form-group">
+                <label for="fullName">ФИО: </label>
+                <input type="text" id="fullName" placeholder="Ваше ФИО..." required>   
+              </div>
+              <div class="hint">
+                <p class="placeholder">Иванов Иван Иванович</p>
+                <p class="error" id="fullNameError"></p>
+              </div>
+            </div>
+            <div class="form-group-container"> 
+              <div class="form-group"> 
+                <label for="registerEmail">Электронная почта: </label> 
+                <input type="email" id="registerEmail" placeholder="Введите почту..." required> 
+              </div> 
+              <div class="hint"> 
+                <p class="placeholder">example@gmail.com</p> 
+                <p class="error" id="registerEmailError"></p> 
+              </div> 
+            </div>
+            
+            <div class="form-group-container"> 
+              <div class="form-group"> 
+                <label for="birthDate">Дата рождения: </label> 
+                <input type="date" id="birthDate" required> 
+              </div> 
+              <div class="hint"> 
+                <p class="placeholder">Формат дд.мм.гггг, возраст от 16 лет</p> 
+                <p class="error" id="birthDateError"></p> 
+              </div> 
+            </div>
+            
+            <div class="form-group-container"> 
+              <div class="form-group"> 
+                <label for="phone">Номер телефона: </label> 
+                <input type="tel" id="phone" placeholder="Ваш телефон..." required> 
+              </div> 
+              <div class="hint"> 
+                <p class="placeholder">Формат +7 (XXX) XXX-XX-XX</p> 
+                <p class="error" id="phoneError"></p> 
+              </div> 
+            </div>
+            
+            <div class="form-group-container"> 
+              <div class="form-group"> 
+                <label for="registerPassword">Пароль: </label> 
+                <input type="password" id="registerPassword" placeholder="Пароль..." required> 
+              </div> 
+              <div class="hint"> 
+                <p class="placeholder">Не менее 6 цифр</p> 
+                <p class="error" id="registerPasswordError"></p> 
+              </div> 
+            </div>
+            
+            <div class="form-group-container"> 
+              <div class="form-group"> 
+                <label for="confirmPassword">Повторите пароль: </label> 
+                <input type="password" id="confirmPassword" placeholder="Повторите пароль..." required> 
+              </div> 
+              <div class="hint"> 
+                <p class="placeholder">Не менее 6 цифр</p> 
+                <p class="error" id="confirmPasswordError"></p> 
+              </div> 
+            </div>
+            <div class="submit">
+              <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+            </div>
+              
+          </form>
+      </div>
+      
+
       
     </main>
 
@@ -85,5 +196,6 @@
         </div>        
     </footer>
 </body>
-<script src="js/scroll_button.js"></script>
+<script src="../js/scroll_button.js"></script>
+<script src="../js/register_form_validation.js"></script>
 </html>

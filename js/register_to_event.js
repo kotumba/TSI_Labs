@@ -1,5 +1,5 @@
  // Получаем все карточки мероприятий 
- const eventCards = document.querySelectorAll('.event-card'); 
+ const eventCards = document.querySelectorAll('.event-card, .event'); 
     
  // Получаем сегодняшнюю дату 
  const today = new Date(); 
@@ -24,4 +24,5 @@
          
      } 
  });
+
 

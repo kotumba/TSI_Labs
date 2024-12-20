@@ -81,25 +81,6 @@ h1,h2,h3 {
 
 
 
- #prev, #next {
-    top: 50%;
-    transform: translateY(-50%); /* Центрируем стрелку вертикально */
-    padding: 12px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: 20px;
-  }
-  
-  #prev {
-    left: 10px;
-  }
-  
-  #next {
-    right: 10px;
-  }
-
 .e-mail {
     width: fit-content;
 }

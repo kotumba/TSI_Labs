@@ -117,10 +117,13 @@ main {
     
 }
 .event-image {
-    height: auto;
+    height: 250px;
 }
 .university-image {
-    height: 180px;
+    height: 10px;
+}
+.event-img {
+    width: 300px;
 }
   
 .event-details {
